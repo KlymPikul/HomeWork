@@ -8,38 +8,41 @@ import java.util.Random;
 public class task_01 {
     public static void main(String[] args) {
 
+            // Создаем массив на 20 элементов
+            int[] array = new int[20];
 
-        int count = 0;
-        int sum = 0;
+            // Заполняем массив случайными целыми числами
+            Random random = new Random();
+            for (int i = 0; i < 20; i++) {
+                array[i] = random.nextInt(100); // Здесь 100 - максимальное случайное число, можно изменить по вашему усмотрению.
+            }
 
-        int len = 20;
-        Random random = new Random();
+            // Выводим массив на экран
+            System.out.println("Массив случайных чисел:");
+            for (int i = 0; i < 20; i++) {
+                System.out.print(array[i] + " ");
+            }
+            System.out.println(); // Перевод строки
 
-        int[] array = new int[len];
-
-        for (int j = 0; j < array.length; j++) {
-            array[j] = random.nextInt(101);
-
-            System.out.print(array[j] + ", ");
-            System.out.println();
-
-
-            //for (int j = 0; j < array.length; j++) {
-
-                if (array[j] % 2 == 0) {
-                    count++;
-                    sum += array[j];
-
-                    System.out.println("Количество четных чисел: " + count);
-                    System.out.println("Сумма четных чисел: " + sum);
+            // Находим количество четных чисел и их сумму
+            int evenCount = 0;
+            int evenSum = 0;
+            for (int i = 0; i < 20; i++) {
+                if (array[i] % 2 == 0) {
+                    evenCount++;
+                    evenSum += array[i];
                 }
             }
 
-
+            // Выводим количество четных чисел и их сумму
+            System.out.println("Количество четных чисел: " + evenCount);
+            System.out.println("Сумма четных чисел: " + evenSum);
         }
+            }
 
 
-    }
+
+
 
 
 

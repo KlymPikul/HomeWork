@@ -1,7 +1,4 @@
-package hwArray;
-
- import java.util.Arrays;
- import java.util.Random;
+package hwArray_Lesson_11;
 
 public class Array {
 
